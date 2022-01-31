@@ -16,7 +16,7 @@ const ReadTable = ({ students, handleEditStudentForm }) => {
               data-bs-target="#editModalForm"
               onClick={(e) => handleEditStudentForm(e, student)}
             >
-              Update
+              Update / Delete
             </button>
           </td>
           {/* <button

@@ -82,6 +82,20 @@ const Table = () => {
       setEditFormData(formValues);
   }
 
+  // delete data
+  const handleDelete = (e) => {
+      e.preventDefault();
+
+      const newStudents = [...students];
+      const formIndex = students.findIndex((student) => student.id === editStudentId);
+
+      newStudents.splice(formIndex, 1);
+
+      setStudents(newStudents);
+  }
+
+
+
   // get data from db
   const fetchUrl = "http://localhost:9090/student/getAll";
   useEffect(() => {
@@ -124,7 +138,7 @@ const Table = () => {
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Address</th>
-            <th colspan="2">Actions</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -278,6 +292,7 @@ const Table = () => {
                     type="submit"
                     data-bs-dismiss="modal"
                     className="btn btn-danger float-start"
+                    onClick={handleDelete}
                   >
                     Delete Record
                   </button>
