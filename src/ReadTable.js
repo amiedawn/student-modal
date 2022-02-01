@@ -19,17 +19,6 @@ const ReadTable = ({ students, handleEditStudentForm }) => {
               Update / Delete
             </button>
           </td>
-          {/* <button
-                  type="button"
-                  className="me-3 btn btn-primary ml-auto d-block mb-2"
-                  data-bs-toggle="modal"
-                //   data-bs-target="#editModalForm" change to delete
-                data-bs-target="#editModalForm"
-                
-                  //   onClick={(e) => handleDeleteStudentForm(e, student)}
-                >
-                  Delete
-                </button> */}
         </tr>
       ))}
     </>

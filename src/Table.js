@@ -118,18 +118,6 @@ const Table = () => {
         >
           Add Student
         </button>
-
-        {/* <form className="row g-3 ms-auto">  //search form
-          <div className="col-auto">
-            <input
-              type="text"
-              className="form-control ms-auto"
-              placeholder="search data"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-        </form> */}
       </div>
 
       <table className="table table-bordered border-primary table-responsive">
@@ -143,7 +131,6 @@ const Table = () => {
         </thead>
         <tbody>
           <ReadTable students={students} handleEditStudentForm={handleEditStudentForm} />
-
         </tbody>
       </table>
 
